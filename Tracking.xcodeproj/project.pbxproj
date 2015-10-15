@@ -32,6 +32,7 @@
 		445C82761B6F0AA20051413A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 445C826C1B6F0AA20051413A /* LICENSE */; };
 		445C82771B6F0AA20051413A /* Matcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 445C826D1B6F0AA20051413A /* Matcher.cpp */; };
 		445C82781B6F0AA20051413A /* Tracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 445C826F1B6F0AA20051413A /* Tracker.cpp */; };
+		447FECFE1B734FB000103929 /* config-sample.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 447FECFD1B734FB000103929 /* config-sample.cfg */; };
 		44A257521B71F6E200B88DAA /* Array in Resources */ = {isa = PBXBuildFile; fileRef = 44A256B91B71F6E200B88DAA /* Array */; };
 		44A257531B71F6E200B88DAA /* Cholesky in Resources */ = {isa = PBXBuildFile; fileRef = 44A256BA1B71F6E200B88DAA /* Cholesky */; };
 		44A257541B71F6E200B88DAA /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44A256BB1B71F6E200B88DAA /* CMakeLists.txt */; };
@@ -155,6 +156,7 @@
 		445C826E1B6F0AA20051413A /* Matcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matcher.h; sourceTree = "<group>"; };
 		445C826F1B6F0AA20051413A /* Tracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tracker.cpp; sourceTree = "<group>"; };
 		445C82701B6F0AA20051413A /* Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
+		447FECFD1B734FB000103929 /* config-sample.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "config-sample.cfg"; sourceTree = "<group>"; };
 		44A256B91B71F6E200B88DAA /* Array */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Array; sourceTree = "<group>"; };
 		44A256BA1B71F6E200B88DAA /* Cholesky */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cholesky; sourceTree = "<group>"; };
 		44A256BB1B71F6E200B88DAA /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
@@ -778,6 +780,7 @@
 		44D648401B704E32009EE33A /* TLD */ = {
 			isa = PBXGroup;
 			children = (
+				447FECFD1B734FB000103929 /* config-sample.cfg */,
 				44D648A11B705B29009EE33A /* cvBlob */,
 				44D648411B704E32009EE33A /* BB.cpp */,
 				44D648421B704E32009EE33A /* BB.h */,
@@ -989,6 +992,7 @@
 				44A257561B71F6E200B88DAA /* Dense in Resources */,
 				44A2576E1B71F6E200B88DAA /* CMakeLists.txt in Resources */,
 				44D648C11B719B21009EE33A /* w2crs.txt in Resources */,
+				447FECFE1B734FB000103929 /* config-sample.cfg in Resources */,
 				44A257681B71F6E200B88DAA /* CMakeLists.txt in Resources */,
 				44A2575C1B71F6E200B88DAA /* QR in Resources */,
 				44D648B71B705B29009EE33A /* README in Resources */,

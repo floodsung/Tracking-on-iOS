@@ -53,7 +53,7 @@ DetectorCascade::DetectorCascade()
     imgWidthStep = -1;
 
     numTrees = 10;
-    numFeatures = 13;
+    numFeatures = 10;
 
     initialised = false;
 

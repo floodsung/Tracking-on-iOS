@@ -13,17 +13,17 @@ void Tracker::track(const Mat im_prev, const Mat im_gray, const vector<Point2f> 
     {
         vector<float> err; //Needs to be float
 
-        //Calculate forward optical flow for prev_location
+        //Calculate forward optical flow for prev_location 计算前向位置的光流（即特征点的移动）
         calcOpticalFlowPyrLK(im_prev, im_gray, points_prev, points_tracked, status, err);
 
         vector<Point2f> points_back;
         vector<unsigned char> status_back;
         vector<float> err_back; //Needs to be float
 
-        //Calculate backward optical flow for prev_location
+        //Calculate backward optical flow for prev_location 计算后向光流
         calcOpticalFlowPyrLK(im_gray, im_prev, points_tracked, points_back, status_back, err_back);
 
-        //Traverse vector backward so we can remove points on the fly
+        //Traverse vector backward so we can remove points on the fly 删除掉飞掉的点 
         for (int i = points_prev.size()-1; i >= 0; i--)
         {
             float l2norm = norm(points_back[i] - points_prev[i]);

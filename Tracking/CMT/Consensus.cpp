@@ -12,14 +12,13 @@ namespace cmt {
 
 void Consensus::initialize(const vector<Point2f> & points_normalized)
 {
-    //FILE_LOG(logDEBUG) << "Consensus::initialize() call";
 
-    //Copy normalized points
+    //Copy normalized points 复制正规化的点
     this->points_normalized = points_normalized;
 
     size_t num_points = points_normalized.size();
 
-    //Create matrices of pairwise distances/angles
+    //Create matrices of pairwise distances/angles 创建矩阵用于计算任何两个点之间的距离和角度
     distances_pairwise = Mat(num_points, num_points, CV_32FC1);
     angles_pairwise = Mat(num_points, num_points, CV_32FC1);
 
@@ -38,7 +37,6 @@ void Consensus::initialize(const vector<Point2f> & points_normalized)
 
     }
 
-    //FILE_LOG(logDEBUG) << "Consensus::initialize() return";
 }
 
 
@@ -103,7 +101,6 @@ void Consensus::findConsensus(const vector<Point2f> & points, const vector<int> 
         const float scale, const float rotation,
         Point2f & center, vector<Point2f> & points_inlier, vector<int> & classes_inlier)
 {
-    //FILE_LOG(logDEBUG) << "Consensus::findConsensus() call";
 
     //If no points are available, reteurn nan
     if (points.size() == 0)
@@ -111,12 +108,10 @@ void Consensus::findConsensus(const vector<Point2f> & points, const vector<int> 
         center.x = numeric_limits<float>::quiet_NaN();
         center.y = numeric_limits<float>::quiet_NaN();
 
-        //FILE_LOG(logDEBUG) << "Consensus::findConsensus() return";
-
         return;
     }
 
-    //Compute votes
+    //Compute votes 计算投票：基本方法就是计算点相对于正规化且计算其旋转加缩放后的点的相对位置 保持相对一致
     vector<Point2f> votes(points.size());
     for (size_t i = 0; i < points.size(); i++)
     {
@@ -129,6 +124,7 @@ void Consensus::findConsensus(const vector<Point2f> & points, const vector<int> 
     cluster_result Z(N-1);
 
     //Compute pairwise distances between votes
+    //计算votes点之间的相对距离
     int index = 0;
     for (size_t i = 0; i < points.size(); i++)
     {
@@ -136,14 +132,13 @@ void Consensus::findConsensus(const vector<Point2f> & points, const vector<int> 
         {
             //TODO: This index calculation is correct, but is it a good thing?
             //int index = i * (points.size() - 1) - (i*i + i) / 2 + j - 1;
+            // 计算相对距离
             D[index] = norm(votes[i] - votes[j]);
             index++;
         }
     }
 
-    //FILE_LOG(logDEBUG) << "Consensus::MST_linkage_core() call";
     MST_linkage_core(N,D,Z);
-    //FILE_LOG(logDEBUG) << "Consensus::MST_linkage_core() return";
 
     union_find nodes(N);
 
@@ -211,7 +206,6 @@ void Consensus::findConsensus(const vector<Point2f> & points, const vector<int> 
 	delete[] S;
 	delete[] T;
 
-    //FILE_LOG(logDEBUG) << "Consensus::findConsensus() return";
 }
 
 } /* namespace cmt */

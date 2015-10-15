@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E75949AD-3750-42E7-BEB8-FD9C44CE53E5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Tracking</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CF1429F9EC4D2E28FB8C92E24BDD6627FE0C522A</key>
+		<string>https://github.com/songrotek/Tracking-on-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Tracking.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CF1429F9EC4D2E28FB8C92E24BDD6627FE0C522A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/songrotek/Tracking-on-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CF1429F9EC4D2E28FB8C92E24BDD6627FE0C522A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CF1429F9EC4D2E28FB8C92E24BDD6627FE0C522A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Tracking</string>
+		</dict>
+	</array>
+</dict>
+</plist>

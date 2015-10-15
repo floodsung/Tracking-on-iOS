@@ -99,7 +99,7 @@ typedef enum {
     beginInit = false;
     startTracking = false;
     
-    trackType = STRUCK_TRACKER;
+    trackType = CMT_TRACKER;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -306,7 +306,7 @@ typedef enum {
         NSLog(@"color track process...");
         cv::Rect rect = colorTracker->track_frame(image);
         
-        rectangle(image, rect, Scalar(125,255,0),1);
+        
     }
     
     
@@ -327,6 +327,7 @@ typedef enum {
         tldTracker->detectorCascade->imgWidth = img_gray.cols;
         tldTracker->detectorCascade->imgHeight = img_gray.rows;
         tldTracker->detectorCascade->imgWidthStep = img_gray.step;
+        
         tldTracker->selectObject(img_gray, &initCTBox);
         NSLog(@"tld track init!");
         startTracking = true;

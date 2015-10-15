@@ -26,22 +26,22 @@ public:
     void initialize(const Mat im_gray, const cv::Rect rect);
     void processFrame(const Mat im_gray);
 
-    Fusion fusion;
-    Matcher matcher;
-    Tracker tracker;
-    Consensus consensus;
+    Fusion fusion;   // 数据融合器
+    Matcher matcher; // 特征匹配器
+    Tracker tracker; // 跟踪器
+    Consensus consensus;  // 一致检查器
 
     string str_detector;
     string str_descriptor;
 
-    vector<Point2f> points_active; //public for visualization purposes
+    vector<Point2f> points_active; //public for visualization purposes 有效特征点
     RotatedRect bb_rot;
 
 private:
     cv::Ptr<FeatureDetector> detector;
     cv::Ptr<DescriptorExtractor> descriptor;
 
-    Size2f size_initial;
+    Size2f size_initial;  // 初始大小
 
     vector<int> classes_active;
 

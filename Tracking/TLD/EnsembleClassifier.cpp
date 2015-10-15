@@ -50,7 +50,7 @@ EnsembleClassifier::EnsembleClassifier() :
     negatives(NULL)
 {
     numTrees = 10;
-    numFeatures = 13;
+    numFeatures = 10;
     enabled = true;
 }
 
